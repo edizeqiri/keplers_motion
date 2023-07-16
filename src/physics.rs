@@ -7,6 +7,11 @@ pub fn GeForce(p1: &SpaceObject, p2: &SpaceObject) -> f64{
     return force;
 }
 
+pub fn getDistance(p1: &SpaceObject, p2: &SpaceObject) -> f64 {
+    let r2 = (p1.position[0] - p2.position[0]).powf(2.0) + (p1.position[1] - p2.position[1]).powf(2.0);
+    return r2.sqrt();
+}
+
 pub fn acceleration(force: f64, mass: f64) -> f64 {
     force / mass
 }

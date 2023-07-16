@@ -29,7 +29,7 @@ impl Galaxy {
                 if i != j {
                     let force = GeForce(&self.entities[i], &self.entities[j]);
                     self.entities[i].update(force, dt);
-                    self.entities[j].update(force, dt);
+                    self.entities[j].update(-force, dt);
                 }
             }
         }

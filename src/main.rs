@@ -9,7 +9,7 @@ use space_object::SpaceObject;
 fn main() {
 
     // set the time step to 100 milliseconds
-    let dt = Duration::from_millis(100);
+    let dt = Duration::from_millis(1000);
 
     // initialize the state of the simulation
     let mut milky_way = universe::Galaxy::new();

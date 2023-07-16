@@ -37,6 +37,8 @@ impl SpaceObject {
         self.force += force;
         self.acceleration = self.acceleration + self.force / self.mass as f64;
         self.velocity = self.velocity + self.acceleration * dt;
+        self.position[0] = self.position[0] + self.velocity * dt;
+        self.position[1] = self.position[1] + self.velocity * dt;
 
     }
 
